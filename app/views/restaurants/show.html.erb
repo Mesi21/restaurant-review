@@ -7,8 +7,8 @@
     <%= @restaurant.phone %>
   </div>
   <div class="d-flex flex-row">
-    <%= link_to "Edit this restaurant", edit_restaurant_path(@restaurant) %> |
-    <%= link_to "Back to restaurants", restaurants_path %>
+    <%= button_to "Edit", edit_restaurant_path(@restaurant), method: :get, class: "btn btn-success m-1" %> 
+    <%= button_to "Back", restaurants_path, method: :get, class: "btn btn-success m-1" %>
+    <%= button_to "Destroy", @restaurant, method: :delete, class: "btn btn-danger m-1" %>
   </div>
-  <%= button_to "Destroy this restaurant", @restaurant, method: :delete, class: "btn btn-danger" %>
 </div>
