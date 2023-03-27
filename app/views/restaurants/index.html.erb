@@ -1,0 +1,22 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Restaurants</h1>
+
+<div id="restaurants">
+  <table class="table">
+    <thead>
+      <th>Name</th>
+      <th>Address</th>
+      <th>Phone</th>
+      <th>Website</th>
+      <th colspan="3"></th>
+    </thead>
+    <tbody>
+      <% @restaurants.each do |restaurant| %>
+        <%= render restaurant %>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+
+<%= link_to "New restaurant", new_restaurant_path %>
